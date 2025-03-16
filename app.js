@@ -15,7 +15,9 @@ dotenv.config({path:'./config/config.env'});
 
 app.use(
   cors({
-    origin: ["*"],
+    origin: ["https://blog-app-ashy-seven.vercel.app",
+      "http://localhost:4000"
+    ],
     methods: ["GET","PUT","DELETE","POST"],
     credentials: true,
 })
