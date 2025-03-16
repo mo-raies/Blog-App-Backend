@@ -28,7 +28,13 @@ app.use(
     useTempFiles:true,
     tempFileDir: "/temp/"
 }))
+app.get("/", (req, res) => {
+  res.status(200).json({
+      succss: true,
+      message: "Backend Running Successfully"
+  })
 
+});
 app.use("/api/v1",userRouter);
 app.use("/api/v1",blogRouter);
 
